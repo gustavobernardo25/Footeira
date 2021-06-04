@@ -2,7 +2,7 @@ function searchTeam(){
     document.getElementById('container').innerHTML = '';
    const teamName = document.getElementById('search').value;
    fetch(`https://www.thesportsdb.com/api/v1/json/1/searchteams.php?t=${teamName}`).then(res => res.json()).then(data =>{
-
+console.log(data)
        for (item of data.teams){
            console.log(item)
            var nome = document.createElement('p');
